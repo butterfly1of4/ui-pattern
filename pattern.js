@@ -21,30 +21,44 @@ const venus =
   const neptune = "https://api.nasa.gov/planetary/apod?api_key=IOPP2e1JpfEP1pCodZ23AiP522NPjqrsXSjdmPv7&date=2002-09-22"
 
 
- 
-
 fetch(url, {
   headers: { IOPP2e1JpfEP1pCodZ23AiP522NPjqrsXSjdmPv7: nasaApiKey },
 })
   .then((res) => {
-    console.log("i worked", res);
+    console.log("i worked", typeof(res));
     return res.json();
-  })
-  .then((json) => {
-    json.url;
-    console.log("json here", json);
+  }) 
+  .then((json) => {json.url;
+    console.log("json here", typeof(json));
   });
+
+let img = document.querySelectorAll("img")
+let imgMerc = document.querySelector(".merc")
 
 fetch(mercury)
   .then((res1) => {
     return res1.json();
   })
   .then((json) => {
-    json.mercury;
+     mercury.json
     console.log("mercury", json);
   })
-
+  
   .catch((error) => console.error(error));
+  json = mercury
+  console.log(json,typeof(mercury), typeof(url))
+
+
+
+
+
+
+
+
+
+
+
+
 
 // mercuryImageAddress = "https://apod.nasa.gov/apod/image/0304/mercurysky_casado_c1.jpg"
 // venusImageAddress = "https://apod.nasa.gov/apod/image/0305/northvenus_magellan.jpg"
