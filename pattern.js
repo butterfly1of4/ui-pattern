@@ -27,23 +27,6 @@ const neptune =
 
 //API pull requests
 
-let image1 = document.querySelector("img");
-let imgMerc = document.querySelector("#merc");
-console.log(imgMerc, image1)
-fetch(mercury)
-  .then((res1) => {
-    return res1.json();
-  })
-  .then((json) => {
-    imgMerc = json.url;
-    console.log(json.url)
-    return imgMerc;
-  })
-let imgMerc = document.querySelector("#merc");
-console.log(imgMerc)
-
-
-
 // fetch(mercury)
 //   .then((res1) => {
 //     return res1.json();
@@ -57,83 +40,83 @@ console.log(imgMerc)
 //   .catch((err) => console.log("error", err));
 //console.log(imgMerc);
 
-let image2 = document.querySelector("img");
-let imgVenus = document.querySelector("#venus");
+// let image2 = document.querySelector("img");
+// let imgVenus = document.querySelector("#venus");
 
-fetch(venus)
-  .then((res1) => {
-    return res1.json();
-  })
-  .then((json) => {
-    imgVenus.src = json.url;
-    return imgVenus;
-  })
-  .catch((err) => console.log("error", err));
+// fetch(venus)
+//   .then((res1) => {
+//     return res1.json();
+//   })
+//   .then((json) => {
+//     imgVenus.src = json.url;
+//     return imgVenus;
+//   })
+//   .catch((err) => console.log("error", err));
 
-let image3 = document.querySelector("img");
-let imgMars = document.querySelector("#mars");
+// let image3 = document.querySelector("img");
+// let imgMars = document.querySelector("#mars");
 
-fetch(mars)
-  .then((res1) => {
-    return res1.json();
-  })
-  .then((json) => {
-    imgMars.src = json.url;
-    return imgMars;
-  })
-  .catch((err) => console.log("error", err));
+// fetch(mars)
+//   .then((res1) => {
+//     return res1.json();
+//   })
+//   .then((json) => {
+//     imgMars.src = json.url;
+//     return imgMars;
+//   })
+//   .catch((err) => console.log("error", err));
 
-let image4 = document.querySelector("img");
-let imgJup = document.querySelector("#jupiter");
+// let image4 = document.querySelector("img");
+// let imgJup = document.querySelector("#jupiter");
 
-fetch(jupiter)
-  .then((res1) => {
-    return res1.json();
-  })
-  .then((json) => {
-    imgJup.src = json.url;
-    return imgJup;
-  })
-  .catch((err) => console.log("error", err));
+// fetch(jupiter)
+//   .then((res1) => {
+//     return res1.json();
+//   })
+//   .then((json) => {
+//     imgJup.src = json.url;
+//     return imgJup;
+//   })
+//   .catch((err) => console.log("error", err));
 
-let image5 = document.querySelector("img");
-let imgSat = document.querySelector("#saturn");
+// let image5 = document.querySelector("img");
+// let imgSat = document.querySelector("#saturn");
 
-fetch(saturn)
-  .then((res1) => {
-    return res1.json();
-  })
-  .then((json) => {
-    imgSat.src = json.url;
-    return imgSat;
-  })
-  .catch((err) => console.log("error", err));
+// fetch(saturn)
+//   .then((res1) => {
+//     return res1.json();
+//   })
+//   .then((json) => {
+//     imgSat.src = json.url;
+//     return imgSat;
+//   })
+//   .catch((err) => console.log("error", err));
 
-let image6 = document.querySelector("img");
-let imgUru = document.querySelector("#uranus");
+// let image6 = document.querySelector("img");
+// let imgUru = document.querySelector("#uranus");
 
-fetch(uranus)
-  .then((res1) => {
-    return res1.json();
-  })
-  .then((json) => {
-    imgUru.src = json.url;
-    return imgUru;
-  })
-  .catch((err) => console.log("error", err));
+// fetch(uranus)
+//   .then((res1) => {
+//     return res1.json();
+//   })
+//   .then((json) => {
+//     imgUru.src = json.url;
+//     return imgUru;
+//   })
+//   .catch((err) => console.log("error", err));
 
-let image7 = document.querySelector("img");
-let imgNep = document.querySelector("#neptune");
+// let image7 = document.querySelector("img");
+// let imgNep = document.querySelector("#neptune");
 
-fetch(neptune)
-  .then((res1) => {
-    return res1.json();
-  })
-  .then((json) => {
-    imgNep.src = json.url;
-    return imgNep;
-  })
-  .catch((err) => console.log("error", err));
+// fetch(neptune)
+//   .then((res1) => {
+//     return res1.json();
+//   })
+//   .then((json) => {
+//     imgNep.src = json.url;
+//     return imgNep;
+//   })
+//   .catch((err) => console.log("error", err));
 
 //Sidebar movement
 let navToggle = document.querySelector("#nav-toggle");
@@ -171,29 +154,20 @@ function closeMenu(e) {
 //    }
 
 // })
+let imgMerc = document.querySelector("#merc")
 
 
-// //let imgMerc = ''
-// fetch(mercury)
-//   .then((res1) => {
-//     return res1.json();
-//   })
-//   .then(function (data) {
-//     console.log(data);
-//     let mercuryImage;
-//     mercuryImage = data.url; //.innerText? or html
-//     findSrc(data);
-//     findSrc(mercuryImage);
-//   });
-// //   .catch((err) => console.log("error", err));
-// //console.log(imgMerc);
-// let imgMerc = ""
-// function findSrc(mercuryImage) {
-//    document.querySelector("#merc").innerHTML = mercuryImage.innerHTML
-//    let imgMarc =  document.querySelector("#merc")
-//    console.log(mercuryImage)
-//    imgMerc.src = mercuryImage.innerHTML
-//    console.log(imgMerc, imgMerc.src)
-//    return imgMerc
-// }
-// console.log(imgMerc.src)
+let on1 = ""
+function clickMercury(on1){
+fetch(mercury)
+.then((res) => {
+   return res.json()
+})
+.then((on1) => {
+   console.log(on1.url)
+   imgMerc.src = on1.url
+   console.log(imgMerc)
+  return imgMerc
+})
+clickMercury()
+}
