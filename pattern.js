@@ -116,15 +116,3 @@ fetch(neptune)
     return imgNep;
   })
   .catch((err) => console.log("error", err));
-
-let a = document.querySelector("a");
-a.addEventListener("click", openNav);
-
-function openNav(e) {
-  document.querySelector(".planets").style.width = "15em";
-}
-
-a.addEventListener("click", closeNav);
-function closeNav(e) {
-  document.querySelector(".planets").style.width = "0";
-}
