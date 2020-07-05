@@ -28,25 +28,26 @@ fetch(url, {
     console.log("i worked", typeof(res));
     return res.json();
   }) 
-  .then((json) => {json.url;
-    console.log("json here", typeof(json));
+  .then((json) => {
+     console.log(json.date)
   });
 
-let img = document.querySelectorAll("img")
-let imgMerc = document.querySelector(".merc")
+let image1 = document.querySelector("img")
+let imgMerc = document.querySelector("#merc")
 
-fetch(mercury)
-  .then((res1) => {
-    return res1.json();
-  })
-  .then((json) => {
-     mercury.json
-    console.log("mercury", json);
-  })
-  
-  .catch((error) => console.error(error));
-  json = mercury
-  console.log(json,typeof(mercury), typeof(url))
+fetch(mercury).then((res1) => {
+   return res1.json()})
+   .then((json) => {
+      console.log(json)
+      console.log(imgMerc)
+      imgMerc.src = json.url
+      return imgMerc
+   })
+   console.log(imgMerc, image1)
+  //.catch(err => console.log("error", err))
+
+
+
 
 
 
