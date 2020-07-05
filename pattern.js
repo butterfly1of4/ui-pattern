@@ -9,67 +9,109 @@ const mercury =
 const venus =
   "https://api.nasa.gov/planetary/apod?api_key=IOPP2e1JpfEP1pCodZ23AiP522NPjqrsXSjdmPv7&date=2003-05-14";
 
+const mars =
+  "https://api.nasa.gov/planetary/apod?api_key=IOPP2e1JpfEP1pCodZ23AiP522NPjqrsXSjdmPv7&date=1999-06-05";
 
-  const mars = "https://api.nasa.gov/planetary/apod?api_key=IOPP2e1JpfEP1pCodZ23AiP522NPjqrsXSjdmPv7&date=1999-06-05"
+const jupiter =
+  "https://api.nasa.gov/planetary/apod?api_key=IOPP2e1JpfEP1pCodZ23AiP522NPjqrsXSjdmPv7&date=2006-05-05";
 
-  const jupiter = "https://api.nasa.gov/planetary/apod?api_key=IOPP2e1JpfEP1pCodZ23AiP522NPjqrsXSjdmPv7&date=2006-05-05"
+const saturn =
+  "https://api.nasa.gov/planetary/apod?api_key=IOPP2e1JpfEP1pCodZ23AiP522NPjqrsXSjdmPv7&date=2003-08-17";
 
-  const saturn = "https://api.nasa.gov/planetary/apod?api_key=IOPP2e1JpfEP1pCodZ23AiP522NPjqrsXSjdmPv7&date=2003-08-17"
+const uranus =
+  "https://api.nasa.gov/planetary/apod?api_key=IOPP2e1JpfEP1pCodZ23AiP522NPjqrsXSjdmPv7&date=1997-11-26";
 
-  const uranus = "https://api.nasa.gov/planetary/apod?api_key=IOPP2e1JpfEP1pCodZ23AiP522NPjqrsXSjdmPv7&date=1997-11-26"
+const neptune =
+  "https://api.nasa.gov/planetary/apod?api_key=IOPP2e1JpfEP1pCodZ23AiP522NPjqrsXSjdmPv7&date=2002-09-22";
 
-  const neptune = "https://api.nasa.gov/planetary/apod?api_key=IOPP2e1JpfEP1pCodZ23AiP522NPjqrsXSjdmPv7&date=2002-09-22"
+let image1 = document.querySelector("img");
+let imgMerc = document.querySelector("#merc");
 
-
-fetch(url, {
-  headers: { IOPP2e1JpfEP1pCodZ23AiP522NPjqrsXSjdmPv7: nasaApiKey },
-})
-  .then((res) => {
-    console.log("i worked", typeof(res));
-    return res.json();
-  }) 
+fetch(mercury)
+  .then((res1) => {
+    return res1.json();
+  })
   .then((json) => {
-     console.log(json.date)
-  });
+    imgMerc.src = json.url;
+    return imgMerc;
+  })
+  .catch((err) => console.log("error", err));
+console.log(imgMerc, image1);
 
-let image1 = document.querySelector("img")
-let imgMerc = document.querySelector("#merc")
+let image2 = document.querySelector("img");
+let imgVenus = document.querySelector("#venus");
 
-fetch(mercury).then((res1) => {
-   return res1.json()})
-   .then((json) => {
-      console.log(json)
-      console.log(imgMerc)
-      imgMerc.src = json.url
-      return imgMerc
-   })
-   console.log(imgMerc, image1)
-  //.catch(err => console.log("error", err))
+fetch(venus)
+  .then((res1) => {
+    return res1.json();
+  })
+  .then((json) => {
+    imgVenus.src = json.url;
+    return imgVenus;
+  })
+  .catch((err) => console.log("error", err));
 
+let image3 = document.querySelector("img");
+let imgMars = document.querySelector("#mars");
 
+fetch(mars)
+  .then((res1) => {
+    return res1.json();
+  })
+  .then((json) => {
+    imgMars.src = json.url;
+    return imgMars;
+  })
+  .catch((err) => console.log("error", err));
 
+let image4 = document.querySelector("img");
+let imgJup = document.querySelector("#jupiter");
 
+fetch(jupiter)
+  .then((res1) => {
+    return res1.json();
+  })
+  .then((json) => {
+    imgJup.src = json.url;
+    return imgJup;
+  })
+  .catch((err) => console.log("error", err));
 
+  let image5 = document.querySelector("img")
+  let imgSat = document.querySelector("#saturn")
 
+  fetch(saturn)
+  .then((res1) => {
+    return res1.json();
+  })
+  .then((json) => {
+    imgSat.src = json.url;
+    return imgSat;
+  })
+  .catch((err) => console.log("error", err));
 
+  let image6 = document.querySelector("img")
+  let imgUru = document.querySelector("#uranus")
 
+  fetch(uranus)
+  .then((res1) => {
+    return res1.json();
+  })
+  .then((json) => {
+    imgUru.src = json.url;
+    return imgUru;
+  })
+  .catch((err) => console.log("error", err));
 
+  let image7 = document.querySelector("img")
+  let imgNep   = document.querySelector("#neptune")
 
-
-
-
-
-
-
-// mercuryImageAddress = "https://apod.nasa.gov/apod/image/0304/mercurysky_casado_c1.jpg"
-// venusImageAddress = "https://apod.nasa.gov/apod/image/0305/northvenus_magellan.jpg"
-// marsImageAddress = "https://apod.nasa.gov/apod/image/9907/mars4_hst.jpg"
-//jupiterImageAddress = "https://apod.nasa.gov/apod/image/0605/redspot2_hst_c68.jpg"
-//saturnImageAddress = "https://apod.nasa.gov/apod/image/0308/saturn_herhst.jpg"
-// uranusImageAddress = "https://apod.nasa.gov/apod/image/9711/uranusleft_nic_big.jpg"
-// neptuneImageAddress = "https://apod.nasa.gov/apod/image/0209/neptuneclouds_vg2.jpg"
-
-/*https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY
-            need date (yyyy-mm-dd), hd (boolean), api_key string 
-  "https://api.nasa.gov/planetary/apod?api_key=IOPP2e1JpfEP1pCodZ23AiP522NPjqrsXSjdmPv7&date=2003-04-12";
-            */
+  fetch(neptune)
+  .then((res1) => {
+    return res1.json();
+  })
+  .then((json) => {
+    imgNep.src = json.url;
+    return imgNep;
+  })
+  .catch((err) => console.log("error", err));
