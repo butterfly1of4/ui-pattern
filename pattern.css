@@ -76,3 +76,14 @@ li {
   border: 2px solid black;
 }
 
+#venus {
+    height: 40em;
+    width: 50em;
+    border: 2px solid black;
+  } 
+
+#mars {
+    height: 30em;
+    width: 50em;
+    border: 2px solid black;
+}

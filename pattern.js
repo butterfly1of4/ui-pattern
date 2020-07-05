@@ -11,7 +11,7 @@ const venus =
   "https://api.nasa.gov/planetary/apod?api_key=IOPP2e1JpfEP1pCodZ23AiP522NPjqrsXSjdmPv7&date=2003-05-14";
 
 const mars =
-  "https://api.nasa.gov/planetary/apod?api_key=IOPP2e1JpfEP1pCodZ23AiP522NPjqrsXSjdmPv7&date=1999-06-05";
+  "https://api.nasa.gov/planetary/apod?api_key=IOPP2e1JpfEP1pCodZ23AiP522NPjqrsXSjdmPv7&date=1999-07-05";
 
 const jupiter =
   "https://api.nasa.gov/planetary/apod?api_key=IOPP2e1JpfEP1pCodZ23AiP522NPjqrsXSjdmPv7&date=2006-05-05";
@@ -26,32 +26,107 @@ const neptune =
   "https://api.nasa.gov/planetary/apod?api_key=IOPP2e1JpfEP1pCodZ23AiP522NPjqrsXSjdmPv7&date=2002-09-22";
 
 //API pull requests
+//MERCURY
+let imgMerc = document.querySelector("#merc");
+let on1 = "";
 
-// fetch(mercury)
-//   .then((res1) => {
-//     return res1.json();
-//   })
-//   .then((json) => {
-//      console.log(json)
-//     imgMerc = json.url;
-//     console.log(json.url)
-//     return imgMerc;
-//   })
-//   .catch((err) => console.log("error", err));
-//console.log(imgMerc);
+// function clickMercury(on1) {
+//   fetch(mercury)
+//     .then((res) => {
+//       return res.json();
+//     })
+//     .then((on1) => {
+//       console.log(on1.url);
+//       imgMerc.src = on1.url;
+//       console.log(imgMerc);
+//       return imgMerc;
+//     });
+//   //  if (id = 'imgMerc')[
+//   //     onOff(imgMerc)
+//   //  ]
+// }
+// clickMercury();
+// console.log(on1);
 
-// let image2 = document.querySelector("img");
-// let imgVenus = document.querySelector("#venus");
+// function onOff(imgMerc) {
+//   let e = imgMerc;
+//   if (e.style.display == "block") e.styl.dipslay = "none";
+//   else e.style.display = "block";
+// }
+// onOff(imgMerc);
 
-// fetch(venus)
-//   .then((res1) => {
-//     return res1.json();
-//   })
-//   .then((json) => {
-//     imgVenus.src = json.url;
-//     return imgVenus;
-//   })
-//   .catch((err) => console.log("error", err));
+// let clickMerc = document.querySelector("#closeMerc");
+// clickMerc.addEventListener("click", function(e){
+//    console.log("I'm mercury")
+// });
+
+//VENUS
+let imgVenus = document.querySelector("#venus")
+
+// function clickVenus(on1) {
+//    fetch(venus)
+//      .then((res) => {
+//        return res.json();
+//      })
+//      .then((on1) => {
+//        console.log(on1.url);
+//        imgVenus.src = on1.url;
+//        console.log(imgVenus);
+//        return imgVenus;
+//      });
+//    }
+//    clickVenus()
+//
+//    imgVenus.addEventListener("click", function(e){
+//       console.log("I'm venus")
+//    })
+
+let picture = document.querySelector(".picture")
+
+   function clearPicture(picture){
+      picture.innerHTML = "";
+   }
+// imgMerc.addEventListener("click", clearPicture)
+// imgVenus.addEventListener("click", clearPicture)
+
+
+
+   // var div = document.getElementById('cart_item');
+   // while(div.firstChild){
+   //     div.removeChild(div.firstChild);
+   // }
+
+   let imgMars = document.querySelector("#mars")
+
+   function clickMars(on1) {
+      fetch(mars)
+        .then((res) => {
+          return res.json();
+        })
+        .then((on1) => {
+          console.log(on1.url);
+          imgMars.src = on1.url;
+          console.log(imgMars);
+          return imgMars;
+        });
+      }
+      clickMars()
+   
+      imgMars.addEventListener("click", function(e){
+         console.log("I'm mars")
+      })
+   
+
+
+
+
+
+
+
+
+
+
+
 
 // let image3 = document.querySelector("img");
 // let imgMars = document.querySelector("#mars");
@@ -118,7 +193,7 @@ const neptune =
 //   })
 //   .catch((err) => console.log("error", err));
 
-//Sidebar movement
+//SIDEBAR MOVEMENT
 let navToggle = document.querySelector("#nav-toggle");
 
 let ul = document.querySelector(".sidenav");
@@ -138,36 +213,4 @@ navToggle.addEventListener("click", closeMenu);
 
 function closeMenu(e) {
   ulClose.style.width = "0";
-}
-
-//Picture pop-up
-//let liMerc = document.querySelector(".closeMerc")
-// liMerc.innerHTML = imgMerc
-//console.log(imgMerc)
-
-// liMerc.addEventListener("click",function(e){
-//    let mercury = document.querySelector("#mercury")
-//    if (mercury.style.display == "none") {
-//       mercury.style.display = "block";
-//    } else {
-//       mercury.style.display = "none";
-//    }
-
-// })
-let imgMerc = document.querySelector("#merc")
-
-
-let on1 = ""
-function clickMercury(on1){
-fetch(mercury)
-.then((res) => {
-   return res.json()
-})
-.then((on1) => {
-   console.log(on1.url)
-   imgMerc.src = on1.url
-   console.log(imgMerc)
-  return imgMerc
-})
-clickMercury()
 }
