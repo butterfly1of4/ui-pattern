@@ -10,42 +10,47 @@ nav {
   height: 5em;
 }
 
-.menu {
-  background-color: white;
-}
 #pageName {
   display: block;
   color: white;
   text-align: center;
-  font-size: 30px;
+  font-size: 40px;
   text-decoration: none;
-  /* padding: 1em; */
+
   background-color: black;
-  /* float: left; */
-  line-height: 5px;
+ 
 }
 #nav-toggle {
-    height: 25px;
-    width: 25px;            
+    height: 40px;
+    width: 40px;            
     background-color: black;
-    float: left;
+    margin: 1em;
+    z-index: 2;
+    padding: 1em;
+    /* position:sticky;
+     */
 }
-
 ul {
   height: 100%;
-  width: 15em;
+  width: 13em;
   position: absolute;
   z-index: 1;
   top: 0;
   right: 0;
   background-color: black;
   transition: 0.5s;
-  padding-top: 10em;
+  padding-top: 8em;
   list-style-position: inside;
   list-style: inside;
   text-align: center;
 }
 
+ul .close {
+    position: absolute;
+    top: 0;
+    left: 13em;
+    /* margin: 15em; */
+}
 li {
   background-color: black;
   align-content: space-around;

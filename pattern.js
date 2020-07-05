@@ -25,6 +25,7 @@ const uranus =
 const neptune =
   "https://api.nasa.gov/planetary/apod?api_key=IOPP2e1JpfEP1pCodZ23AiP522NPjqrsXSjdmPv7&date=2002-09-22";
 
+  //API pull requests
 let image1 = document.querySelector("img");
 let imgMerc = document.querySelector("#merc");
 
@@ -116,4 +117,44 @@ fetch(neptune)
     return imgNep;
   })
   .catch((err) => console.log("error", err));
+
   
+//Sidebar movement
+let navToggle = document.querySelector("#nav-toggle");
+
+let ul = document.querySelector(".sidenav")
+let ulClose = document.querySelector(".close")
+// function openClose(e){
+//    let count = 0;
+//    let x = navToggle;
+//    if (x)
+// }
+navToggle.addEventListener("click", openMenu)
+
+
+navToggle.addEventListener("click",openMenu)
+function openMenu(e){
+   ul.style.width = "15em";
+
+}
+navToggle.addEventListener("click", closeMenu)
+
+function closeMenu(e) {
+   ulClose.style.width = "0";
+}
+
+//Picture pop-up
+let liMerc = document.querySelector(".closeMerc")
+// liMerc.innerHTML = imgMerc
+console.log(imgMerc)
+
+
+// liMerc.addEventListener("click",function(e){
+//    let mercury = document.querySelector("#mercury")
+//    if (mercury.style.display == "none") {
+//       mercury.style.display = "block";
+//    } else {
+//       mercury.style.display = "none";
+//    }
+
+// })
