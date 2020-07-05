@@ -3,6 +3,7 @@ const url =
   "https://api.nasa.gov/planetary/apod?api_key=IOPP2e1JpfEP1pCodZ23AiP522NPjqrsXSjdmPv7";
 
 const nasaApiKey = "IOPP2e1JpfEP1pCodZ23AiP522NPjqrsXSjdmPv7";
+
 const mercury =
   "https://api.nasa.gov/planetary/apod?api_key=IOPP2e1JpfEP1pCodZ23AiP522NPjqrsXSjdmPv7&date=2003-04-12";
 
@@ -77,10 +78,10 @@ fetch(jupiter)
   })
   .catch((err) => console.log("error", err));
 
-  let image5 = document.querySelector("img")
-  let imgSat = document.querySelector("#saturn")
+let image5 = document.querySelector("img");
+let imgSat = document.querySelector("#saturn");
 
-  fetch(saturn)
+fetch(saturn)
   .then((res1) => {
     return res1.json();
   })
@@ -90,10 +91,10 @@ fetch(jupiter)
   })
   .catch((err) => console.log("error", err));
 
-  let image6 = document.querySelector("img")
-  let imgUru = document.querySelector("#uranus")
+let image6 = document.querySelector("img");
+let imgUru = document.querySelector("#uranus");
 
-  fetch(uranus)
+fetch(uranus)
   .then((res1) => {
     return res1.json();
   })
@@ -103,10 +104,10 @@ fetch(jupiter)
   })
   .catch((err) => console.log("error", err));
 
-  let image7 = document.querySelector("img")
-  let imgNep   = document.querySelector("#neptune")
+let image7 = document.querySelector("img");
+let imgNep = document.querySelector("#neptune");
 
-  fetch(neptune)
+fetch(neptune)
   .then((res1) => {
     return res1.json();
   })
@@ -115,3 +116,15 @@ fetch(jupiter)
     return imgNep;
   })
   .catch((err) => console.log("error", err));
+
+let a = document.querySelector("a");
+a.addEventListener("click", openNav);
+
+function openNav(e) {
+  document.querySelector(".planets").style.width = "15em";
+}
+
+a.addEventListener("click", closeNav);
+function closeNav(e) {
+  document.querySelector(".planets").style.width = "0";
+}
