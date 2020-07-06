@@ -8,8 +8,10 @@ nav {
   background-color: black;
   overflow: hidden;
   height: 5em;
-  text-align: right;
-
+  text-align: center;
+  color: white;
+  line-height: 2;
+  font-size: 40px;
 }
 
 #pageName {
