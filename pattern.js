@@ -89,72 +89,54 @@ function clickJupiter(on1) {
 }
 clickJupiter();
 
-
 // //SATURN
-// let imgSaturn = document.querySelector("#saturn");
+let imgSaturn = document.querySelector("#saturn");
 
-// function clickSaturn(on1) {
-//   fetch(saturn)
-//     .then((res) => {
-//       return res.json();
-//     })
-//     .then((on1) => {
-//       console.log(on1.url);
-//       imgSaturn.src = on1.url;
-//       console.log(imgSaturn);
-//       return imgSaturn;
-//     });
-// }
-// clickSaturn();
-
-// closeSaturn.addEventListener("click", function (e) {
-//imgSaturn.classList.remove("onOff")
-//console.log("I'm saturn");
-// });
+function clickSaturn(on1) {
+  fetch(saturn)
+    .then((res) => {
+      return res.json();
+    })
+    .then((on1) => {
+      imgSaturn.src = on1.url;
+      return imgSaturn;
+    });
+}
+clickSaturn();
 
 // //URANUS
-// let imgUranus = document.querySelector("#uranus");
+let imgUranus = document.querySelector("#uranus");
 
-// function clickUranus(on1) {
-//   fetch(uranus)
-//     .then((res) => {
-//       return res.json();
-//     })
-//     .then((on1) => {
-//       console.log(on1.url);
-//       imgUranus.src = on1.url;
-//       console.log(imgUranus);
-//       return imgUranus;
-//     });
-// }
-// clickUranus();
+function clickUranus(on1) {
+  fetch(uranus)
+    .then((res) => {
+      return res.json();
+    })
+    .then((on1) => {
+      imgUranus.src = on1.url;
+      return imgUranus;
+    });
+}
+clickUranus();
 
-// closeUranus.addEventListener("click", function (e) {
-//imgUranus.classList.remove("onOff")
-//console.log("I'm uranus");
-// });
 
 // //NEPTUNE
-// let imgNep = document.querySelector("#neptune");
+let imgNep = document.querySelector("#neptune");
 
-// function clickNep(on1) {
-//   fetch(neptune)
-//     .then((res) => {
-//       return res.json();
-//     })
-//     .then((on1) => {
-//       console.log(on1.url);
-//       imgNep.src = on1.url;
-//       console.log(imgNep);
-//       return imgNep;
-//     });
-// }
-// clickNep();
+function clickNep(on1) {
+  fetch(neptune)
+    .then((res) => {
+      return res.json();
+    })
+    .then((on1) => {
+      console.log(on1.url);
+      imgNep.src = on1.url;
+      console.log(imgNep);
+      return imgNep;
+    });
+}
+clickNep();
 
-// closeNeptune.addEventListener("click", function (e) {
-//imgNep.classList.remove("onOff")
-//console.log("I'm neptune");
-// });
 
 //OPEN SIDEBAR
 let sideBar = document.querySelector("#nav-toggle");
@@ -183,10 +165,10 @@ function closeSidebar(e) {
 }
 
 //OPEN MERCURY PICTURE
-let clickMerc = document.querySelector("#closeMerc");
-clickMerc.addEventListener("mouseout", closeSidebar);
-clickMerc.addEventListener("click", seeMerc);
-clickMerc.addEventListener("click", closePic);
+let onMerc = document.querySelector("#closeMerc");
+onMerc.addEventListener("mouseout", closeSidebar);
+onMerc.addEventListener("click", seeMerc);
+onMerc.addEventListener("click", closePic);
 
 function seeMerc(e) {
   imgMerc.classList.remove("onOff");
@@ -219,3 +201,30 @@ function seeJupiter(e) {
 onJupiter.addEventListener("mouseout", closeSidebar);
 onJupiter.addEventListener("click", seeJupiter);
 onJupiter.addEventListener("click", closePic);
+
+//OPEN SATURN PICTURE
+let onSaturn = document.querySelector("#closeSaturn");
+function seeSaturn(e) {
+  imgSaturn.classList.remove("onOff");
+}
+onSaturn.addEventListener("mouseout", closeSidebar);
+onSaturn.addEventListener("click", seeSaturn);
+onSaturn.addEventListener("click", closePic);
+
+//OPEN URANUS PICTURE
+let onUranus = document.querySelector("#closeUranus");
+function seeUranus(e) {
+  imgUranus.classList.remove("onOff");
+}
+onUranus.addEventListener("mouseout", closeSidebar);
+onUranus.addEventListener("click", seeUranus);
+onUranus.addEventListener("click", closePic);
+
+//OPEN NEPTUNE PICTURE
+let onNeptune = document.querySelector("#closeNeptune");
+function seeNeptune(e) {
+  imgNep.classList.remove("onOff");
+}
+onNeptune.addEventListener("mouseout", closeSidebar);
+onNeptune.addEventListener("click", seeNeptune);
+onNeptune.addEventListener("click", closePic);
