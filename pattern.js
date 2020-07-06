@@ -1,3 +1,4 @@
+console.log("still here")
 //NASA API
 const url =
   "https://api.nasa.gov/planetary/apod?api_key=IOPP2e1JpfEP1pCodZ23AiP522NPjqrsXSjdmPv7";
@@ -185,24 +186,41 @@ function clickNav(e) {}
 
 let sideBar = document.querySelector("#nav-toggle");
 
-sideBar.addEventListener("click", function (e) {
+sideBar.addEventListener("click", openSidebar) 
+function openSidebar(e){
   document.querySelector(".open").style.width = "250px";
-});
+};
+
+let centerPic = document.querySelector(".picture")
+
+
+//centerPic.addEventListener("click", closePic)
+function closePic(e){
+   if (centerPic.style.display === "none") {
+            centerPic.style.display = "block"
+         } else {
+            centerPic.style.display = "none"
+         }console.log("pic gone")
+}
+
+sideBar.addEventListener("mouseout", function(e){
+         document.querySelector(".close")
+     .style.width = 0})
+ 
 
 let clickMerc = document.querySelector("#closeMerc");
 
-clickMerc.addEventListener("click", newPlanet);
+clickMerc.addEventListener("click", seeMerc)
 
-function newPlanet(planet) {
-  let e = planet;
-  //e.preventDefault()
-  planet.classList.add("pictureGone");
-  console.log("full");
-  planet.classList.remove("picture");
-  console.log("empty");
+clickMerc,addEventListener("mouseover", closePic)
+
+function seeMerc(e){
+   imgMerc.classList.remove("onOff") 
+   console.log("yaypic") 
+}
 
   //    planet.classList.remove("onOff")
   //    sideBar.removeEventListener("click", function(e){
   //       document.querySelector(".close")
   //   .style.width = 0})
-}
+
