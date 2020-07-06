@@ -129,9 +129,7 @@ function clickNep(on1) {
       return res.json();
     })
     .then((on1) => {
-      console.log(on1.url);
       imgNep.src = on1.url;
-      console.log(imgNep);
       return imgNep;
     });
 }
