@@ -77,6 +77,9 @@ closeVenus.addEventListener("click", function (e) {
   console.log("I'm venus");
 });
 
+function clickNav(e){
+
+}
 // //MARS
 // let imgMars = document.querySelector("#mars");
 // function clickMars(on1) {
@@ -185,7 +188,14 @@ closeVenus.addEventListener("click", function (e) {
 //console.log("I'm neptune");
 // });
 
+let sideBar = document.querySelector("#nav-toggle")
+
+sideBar.addEventListener("click", function(e){
+   document.querySelector(".open").style.width = "250px";
+})
+// sideBar.addEventListener("click", closeMenu)
 function newPlanet(planet){
+   e.preventDefault()
    planet.classList.remove("picture")
    planet.classList.add("picgureGone")
    planet.classList.remove("onOff")

@@ -22,10 +22,11 @@ nav {
   background-color: black;
 }
 
-ul {
+
+ul.close {
   height: 100%;
-  width: 13em;
-  position: absolute;
+  width: 0;
+  position: fixed;
   z-index: 1;
   top: 0;
   right: 0;
@@ -35,14 +36,10 @@ ul {
   list-style-position: inside;
   list-style: inside;
   text-align: center;
+  overflow-x: hidden;;
 }
 
-ul .close {
-  position: absolute;
-  top: 0;
-  left: 13em;
-  /* margin: 15em; */
-}
+
 
 li {
   background-color: black;
@@ -60,12 +57,9 @@ li {
     background-color: black;
     text-align: right;
     z-index: 2;
-    font-size: 30px;
-    padding-right: 1em;
-    padding-bottom: 0;
-    position:fixed;
-    right: 2em;   
-    top: 2em;
+    font-size: 35px;
+    
+    position: sticky;
 }
 .picture {
   margin: 6em 27em auto auto;
