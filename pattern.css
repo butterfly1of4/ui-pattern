@@ -68,6 +68,9 @@ li {
   height: 30em;
   background-color: white;
   position: sticky;
+    text-align: center;
+align-content: center;
+
 }
 
 #merc {
@@ -86,4 +89,27 @@ li {
     height: 30em;
     width: 50em;
     border: 2px solid black;
+}
+#jupiter {
+    height: 40em;
+    width: 50em;
+    border: 2px solid black;
+}
+#saturn {
+    height: 32em;
+    width: 50em;
+    border: 2px solid black;
+}
+#uranus {
+    height: 30em;
+    width: 50em;
+    border: 2px solid black;
+}
+#neptune {
+    height: 30em;
+    width: 50em;
+    border: 2px solid black;
+}
+.onOff {
+    display: none;
 }
