@@ -8,6 +8,8 @@ nav {
   background-color: black;
   overflow: hidden;
   height: 5em;
+  text-align: right;
+
 }
 
 #pageName {
@@ -18,18 +20,8 @@ nav {
   text-decoration: none;
 
   background-color: black;
- 
 }
-#nav-toggle {
-    height: 40px;
-    width: 40px;            
-    background-color: black;
-    margin: 1em;
-    z-index: 2;
-    padding: 1em;
-    /* position:sticky;
-     */
-}
+
 ul {
   height: 100%;
   width: 13em;
@@ -46,11 +38,12 @@ ul {
 }
 
 ul .close {
-    position: absolute;
-    top: 0;
-    left: 13em;
-    /* margin: 15em; */
+  position: absolute;
+  top: 0;
+  left: 13em;
+  /* margin: 15em; */
 }
+
 li {
   background-color: black;
   align-content: space-around;
@@ -61,18 +54,35 @@ li {
   list-style-position: inherit;
   padding-top: 2em;
 }
-
+#nav-toggle {
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    text-align: right;
+    z-index: 2;
+    font-size: 30px;
+    padding-right: 1em;
+    padding-bottom: 0;
+    position:fixed;
+    right: 2em;   
+    top: 2em;
+}
 .picture {
   margin: 6em 27em auto auto;
   width: 50em;
   height: 30em;
   background-color: white;
   position: sticky;
-    text-align: center;
-align-content: center;
-
+  text-align: center;
+  align-content: center;
 }
 
+.pictureGone {
+    margin: 6em 27em auto auto;
+    width: 50em;
+    height: 30em; 
+    position: sticky;
+}
 #merc {
   height: 30em;
   width: 50em;
@@ -80,36 +90,36 @@ align-content: center;
 }
 
 #venus {
-    height: 40em;
-    width: 50em;
-    border: 2px solid black;
-  } 
+  height: 40em;
+  width: 50em;
+  border: 2px solid black;
+}
 
 #mars {
-    height: 30em;
-    width: 50em;
-    border: 2px solid black;
+  height: 30em;
+  width: 50em;
+  border: 2px solid black;
 }
 #jupiter {
-    height: 40em;
-    width: 50em;
-    border: 2px solid black;
+  height: 40em;
+  width: 50em;
+  border: 2px solid black;
 }
 #saturn {
-    height: 32em;
-    width: 50em;
-    border: 2px solid black;
+  height: 32em;
+  width: 50em;
+  border: 2px solid black;
 }
 #uranus {
-    height: 30em;
-    width: 50em;
-    border: 2px solid black;
+  height: 30em;
+  width: 50em;
+  border: 2px solid black;
 }
 #neptune {
-    height: 30em;
-    width: 50em;
-    border: 2px solid black;
+  height: 30em;
+  width: 50em;
+  border: 2px solid black;
 }
 .onOff {
-    display: none;
+  display: none;
 }

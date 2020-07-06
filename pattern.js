@@ -27,7 +27,9 @@ const neptune =
 
 //API pull requests
 let showPic = document.querySelectorAll(".onOff")
-   
+// function addHide(planet){
+//    planet.classList.remove("onOff")
+// }
 
 //MERCURY;
 let imgMerc = document.querySelector("#merc");
@@ -49,10 +51,9 @@ clickMercury();
 console.log(on1);
 
 let clickMerc = document.querySelector("#closeMerc");
-clickMerc.addEventListener("click", function (e) {
-   imgMerc.classList.remove("onOff")
+  clickMerc.addEventListener("click", newPlanet)
   console.log("I'm mercury");
-});
+
 
 //VENUS
 let imgVenus = document.querySelector("#venus");
@@ -72,7 +73,7 @@ function clickVenus(on1) {
 clickVenus();
 
 closeVenus.addEventListener("click", function (e) {
-   imgVenus.classList.remove("onOff")
+
   console.log("I'm venus");
 });
 
@@ -184,37 +185,13 @@ closeVenus.addEventListener("click", function (e) {
 //console.log("I'm neptune");
 // });
 
-
-//
-
-
-// function onOff(planet) {
-//    let e;
-//    if (e.style.display == "block") e.styl.dipslay = "none";
-//    else e.style.display = "block";
-//  }
-//  onOff(imgMerc);
- 
-//  let picture = document.querySelector(".picture");
-//  picture.innerText = "THE PLANET"
-//SIDEBAR MOVEMENT
-let navToggle = document.querySelector("#nav-toggle");
-
-let ul = document.querySelector(".sidenav");
-let ulClose = document.querySelector(".close");
-// function openClose(e){
-//    let count = 0;
-//    let x = navToggle;
-//    if (x)
-// }
-navToggle.addEventListener("click", openMenu);
-
-navToggle.addEventListener("click", openMenu);
-function openMenu(e) {
-  ul.style.width = "15em";
+function newPlanet(planet){
+   planet.classList.remove("picture")
+   planet.classList.add("picgureGone")
+   planet.classList.remove("onOff")
+   
 }
-navToggle.addEventListener("click", closeMenu);
 
-function closeMenu(e) {
-  ulClose.style.width = "0";
-}
+
+
+
