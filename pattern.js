@@ -1,4 +1,4 @@
-console.log("still here")
+console.log("still here");
 //NASA API
 const url =
   "https://api.nasa.gov/planetary/apod?api_key=IOPP2e1JpfEP1pCodZ23AiP522NPjqrsXSjdmPv7";
@@ -28,9 +28,6 @@ const neptune =
 
 //API pull requests
 let showPic = document.querySelectorAll(".onOff");
-// function addHide(planet){
-//    planet.classList.remove("onOff")
-// }
 
 //MERCURY;
 let imgMerc = document.querySelector("#merc");
@@ -42,17 +39,11 @@ function clickMercury(on1) {
       return res.json();
     })
     .then((on1) => {
-      console.log(on1.url);
       imgMerc.src = on1.url;
-      console.log(imgMerc);
       return imgMerc;
     });
 }
 clickMercury();
-console.log(on1);
-
-//   clickMerc.addEventListener("click", newPlanet)
-//   console.log("I'm mercury");
 
 //VENUS
 let imgVenus = document.querySelector("#venus");
@@ -63,60 +54,41 @@ function clickVenus(on1) {
       return res.json();
     })
     .then((on1) => {
-      console.log(on1.url);
       imgVenus.src = on1.url;
-      console.log(imgVenus);
       return imgVenus;
     });
 }
 clickVenus();
 
-closeVenus.addEventListener("click", function (e) {
-  console.log("I'm venus");
-});
+//MARS
+let imgMars = document.querySelector("#mars");
+function clickMars(on1) {
+  fetch(mars)
+    .then((res) => {
+      return res.json();
+    })
+    .then((on1) => {
+      imgMars.src = on1.url;
+      return imgMars;
+    });
+}
+clickMars();
 
-function clickNav(e) {}
-// //MARS
-// let imgMars = document.querySelector("#mars");
-// function clickMars(on1) {
-//   fetch(mars)
-//     .then((res) => {
-//       return res.json();
-//     })
-//     .then((on1) => {
-//       console.log(on1.url);
-//       imgMars.src = on1.url;
-//       console.log(imgMars);
-//       return imgMars;
-//     });
-// }
-// clickMars();
-
-// closeMars.addEventListener("click", function (e) {
-//imgMars.classList.remove("onOff")
-//console.log("I'm mars");
-// });
 // //JUPITER
-// let imgJupiter = document.querySelector("#jupiter");
+let imgJupiter = document.querySelector("#jupiter");
 
-// function clickJupiter(on1) {
-//   fetch(jupiter)
-//     .then((res) => {
-//       return res.json();
-//     })
-//     .then((on1) => {
-//       console.log(on1.url);
-//       imgJupiter.src = on1.url;
-//       console.log(imgJupiter);
-//       return imgJupiter;
-//     });
-// }
-// clickJupiter();
+function clickJupiter(on1) {
+  fetch(jupiter)
+    .then((res) => {
+      return res.json();
+    })
+    .then((on1) => {
+      imgJupiter.src = on1.url;
+      return imgJupiter;
+    });
+}
+clickJupiter();
 
-// closeJupiter.addEventListener("click", function (e) {
-//imgJupiter.classList.remove("onOff")
-//console.log("I'm jupiter");
-// });
 
 // //SATURN
 // let imgSaturn = document.querySelector("#saturn");
@@ -184,43 +156,66 @@ function clickNav(e) {}
 //console.log("I'm neptune");
 // });
 
+//OPEN SIDEBAR
 let sideBar = document.querySelector("#nav-toggle");
 
-sideBar.addEventListener("click", openSidebar) 
-function openSidebar(e){
+sideBar.addEventListener("click", openSidebar);
+function openSidebar(e) {
   document.querySelector(".open").style.width = "250px";
-};
-
-let centerPic = document.querySelector(".picture")
-
-
-//centerPic.addEventListener("click", closePic)
-function closePic(e){
-   if (centerPic.style.display === "none") {
-            centerPic.style.display = "block"
-         } else {
-            centerPic.style.display = "none"
-         }console.log("pic gone")
 }
 
-sideBar.addEventListener("mouseout", function(e){
-         document.querySelector(".close")
-     .style.width = 0})
- 
+//REMOVE CENTER PLACEHOLDER
+let centerPic = document.querySelector(".picture");
+function closePic(e) {
+  if (centerPic.style.display === "none") {
+    centerPic.style.display = "block";
+  } else {
+    centerPic.style.display = "none";
+  }
+  console.log("pic gone");
+}
 
+//CLOSE SIDEBAR
+//sideBar.addEventListener("mouseout", closeSidebar)
+function closeSidebar(e) {
+  document.querySelector(".close").style.width = "0";
+  console.log("nav gone");
+}
+
+//OPEN MERCURY PICTURE
 let clickMerc = document.querySelector("#closeMerc");
+clickMerc.addEventListener("mouseout", closeSidebar);
+clickMerc.addEventListener("click", seeMerc);
+clickMerc.addEventListener("click", closePic);
 
-clickMerc.addEventListener("click", seeMerc)
-
-clickMerc,addEventListener("mouseover", closePic)
-
-function seeMerc(e){
-   imgMerc.classList.remove("onOff") 
-   console.log("yaypic") 
+function seeMerc(e) {
+  imgMerc.classList.remove("onOff");
+  console.log("yaypic");
 }
 
-  //    planet.classList.remove("onOff")
-  //    sideBar.removeEventListener("click", function(e){
-  //       document.querySelector(".close")
-  //   .style.width = 0})
+// OPEN VENUS PICTURE
+let onVenus = document.querySelector("#closeVenus");
+function seeVenus(e) {
+  imgVenus.classList.remove("onOff");
+}
+onVenus.addEventListener("mouseout", closeSidebar);
+onVenus.addEventListener("click", seeVenus);
+onVenus.addEventListener("click", closePic);
 
+//OPEN MARS PICTURE
+let onMars = document.querySelector("#closeMars");
+function seeMars(e) {
+  imgMars.classList.remove("onOff");
+}
+onMars.addEventListener("mouseout", closeSidebar);
+onMars.addEventListener("click", seeMars);
+onMars.addEventListener("click", closePic);
+
+//OPEN JUPITER PICTURE
+let onJupiter = document.querySelector("#closeJupiter");
+function seeJupiter(e) {
+  imgJupiter.classList.remove("onOff");
+}
+onJupiter.addEventListener("mouseout", closeSidebar);
+onJupiter.addEventListener("click", seeJupiter);
+onJupiter.addEventListener("click", closePic);
