@@ -38,24 +38,29 @@ nav {
   font-size: 30px;
 }
 
-.hamburger {
-  height: 3em;
-  width: 3em;
+/* .hamburger {
+  height: 1em;
+  width: 1em;
   /* margin: auto 5em ; */
   /* -webkit-filter: invert(1); */
   /* filter: invert(1); */
-  cursor: pointer;
+  /* cursor: pointer; */
   /* z-index:1; */
-}
 
 .open {
-  background-image: url("/icons/circlehamburger2.png");
+  /* background-color: white; */
+  background-image: url("circlehamburger2.png");
   background-color: transparent;
   /* border-style: none; */
   /* border: none; */
   /* padding: 15px; */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   cursor: pointer;
   margin-right: 10em;
+  height: 4em;
+  width: 4em;
   /* z-index: 1; */
   filter: invert(1);
 
@@ -79,7 +84,7 @@ nav {
   display: none;
   position: absolute;
   background-color: white;
-  margin-top: 40%;
+  margin-top: 30%;
   min-width: 150px;
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);

@@ -144,7 +144,7 @@ setNeptune()
 
 function myFunction() {
   
-  document.getElementById("dropdownMenu").classLisrt.toggle("show")
+  document.getElementById("dropdownMenu").classList.toggle("show")
 
 }
 
