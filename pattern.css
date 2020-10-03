@@ -1,121 +1,124 @@
-* {
+body {
   box-sizing: border-box;
-  /* margin: 1em solid black; */
-  background-color: gray;
+  max-width: 100vw;
+  max-height: 100vh;
+  margin:auto;
+  /* overflow: hidden; */
 }
 
 nav {
-  background-color: black;
-  overflow: hidden;
-  height: 5em;
-  text-align: center;
   color: white;
-  line-height: 2;
-  font-size: 40px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-image: url("images/night_trees.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+  /* width: 100vw; */
+  height: 22vh;
+  max-width: 100vw;
+  padding: 0 15px 15px 15px;
+  margin: 0;
+  /* overflow:hidden; */
 }
 
-#pageName {
-  display: block;
-  color: white;
-  text-align: center;
-  font-size: 40px;
-  text-decoration: none;
-
-  background-color: black;
+.navWrapper {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  /* margin-left: 40%; */
 }
 
+.heading {
+  margin: auto ;
+  font-size: 30px;
+}
 
-ul.close {
-  height: 100%;
-  width: 0;
-  position: fixed;
+.hamburger {
+  height: 3em;
+  width: 3em;
+  /* margin: auto 5em ; */
+  -webkit-filter: invert(1);
+  filter: invert(1);
+  cursor: pointer;
+}
+
+.open {
+  background-color: transparent;
+  border-style: none;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  margin-right: 10em;
   z-index: 1;
-  top: 0;
-  right: 0;
-  background-color: black;
-  transition: 0.5s;
-  padding-top: 8em;
-  list-style-position: inside;
-  list-style: inside;
-  text-align: center;
-  overflow-x: hidden;;
-}
 
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
 
+  /* overflow:hidden; */
+}
+.dropdown .open {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 14px 16px;
+  z-index: 1;
 
-li {
-  background-color: black;
-  align-content: space-around;
-  font-size: 25px;
-  color: white;
-  display: block;
-  transition: 0.3s;
-  list-style-position: inherit;
-  padding-top: 2em;
 }
-#nav-toggle {
-    height: 40px;
-    width: 40px;
-    background-color: black;
-    text-align: right;
-    z-index: 2;
-    font-size: 35px;
-    
-    position: sticky;
-}
-.picture {
-  margin: 6em 27em auto auto;
-  width: 50em;
-  height: 30em;
-  background-color: white;
-  position: sticky;
-  text-align: center;
-  align-content: center;
-}
-
-.pictureGone {
-    margin: 6em 27em auto auto;
-    width: 50em;
-    height: 30em; 
-    position: sticky;
-}
-#merc {
-  height: 30em;
-  width: 50em;
-  border: 2px solid black;
-}
-
-#venus {
-  height: 40em;
-  width: 50em;
-  border: 2px solid black;
-}
-
-#mars {
-  height: 30em;
-  width: 50em;
-  border: 2px solid black;
-}
-#jupiter {
-  height: 40em;
-  width: 50em;
-  border: 2px solid black;
-}
-#saturn {
-  height: 32em;
-  width: 50em;
-  border: 2px solid black;
-}
-#uranus {
-  height: 30em;
-  width: 50em;
-  border: 2px solid black;
-}
-#neptune {
-  height: 30em;
-  width: 50em;
-  border: 2px solid black;
-}
-.onOff {
+.dropdown_content {
   display: none;
+  position: absolute;
+  background-color: white;
+  margin-top: 40%;
+  min-width: 150px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  color: black;
+}
+
+.dropdown_content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.show {
+  /* display: block; */
+  display: flex;
+  flex-flow:column;
+}
+
+.placeholder {
+  display:flex;
+  /* flex-flow: row; */
+  margin: 10%;
+  background-image: url("./images/galaxy-green.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: black;
+  height: auto;
+}
+
+
+.img {
+  display:flex;
+  /* visibility: hidden; */
+  margin: 10% auto;
+  /* overflow: hidden; */
+
+}
+
+.active {
+  /* overflow: hidden; */
+  visibility: visible;
 }

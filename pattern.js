@@ -27,202 +27,242 @@ const neptune =
   "https://api.nasa.gov/planetary/apod?api_key=IOPP2e1JpfEP1pCodZ23AiP522NPjqrsXSjdmPv7&date=2002-09-22";
 
 //API pull requests
-let showPic = document.querySelectorAll(".onOff");
 
-//MERCURY;
-let imgMerc = document.querySelector("#merc");
+
 let on1 = "";
+//MERCURY;
+let Mercury = document.querySelector("#Mercury");
 
-function clickMercury(on1) {
+function setMercury(on1) {
   fetch(mercury)
     .then((res) => {
       return res.json();
     })
     .then((on1) => {
-      imgMerc.src = on1.url;
-      return imgMerc;
+      Mercury.src = on1.url;
+      return Mercury;
     });
+ return on1, Mercury.src
 }
-clickMercury();
+setMercury();
+
 
 //VENUS
-let imgVenus = document.querySelector("#venus");
+let Venus = document.querySelector("#Venus")
 
-function clickVenus(on1) {
+function setVenus(on1) {
   fetch(venus)
-    .then((res) => {
-      return res.json();
-    })
-    .then((on1) => {
-      imgVenus.src = on1.url;
-      return imgVenus;
-    });
+  .then((res) => {
+    return res.json()
+  }).then((on1) => {
+    Venus.src = on1.url;
+    return Venus;
+  });
+return on1, Venus
 }
-clickVenus();
+setVenus()
 
 //MARS
-let imgMars = document.querySelector("#mars");
-function clickMars(on1) {
+let Mars = document.querySelector("#Mars")
+
+function setMars(on1) {
   fetch(mars)
-    .then((res) => {
-      return res.json();
-    })
-    .then((on1) => {
-      imgMars.src = on1.url;
-      return imgMars;
-    });
+  .then((res) => {
+    return res.json()
+  }).then((on1) => {
+    Mars.src = on1.url;
+    return Mars;
+  });
+return on1, Mars
 }
-clickMars();
+setMars()
 
-// //JUPITER
-let imgJupiter = document.querySelector("#jupiter");
+//JUPITER
+let Jupiter = document.querySelector("#Jupiter")
 
-function clickJupiter(on1) {
+function setJupiter(on1) {
   fetch(jupiter)
-    .then((res) => {
-      return res.json();
-    })
-    .then((on1) => {
-      imgJupiter.src = on1.url;
-      return imgJupiter;
-    });
+  .then((res) => {
+    return res.json()
+  }).then((on1) => {
+    Jupiter.src = on1.url;
+    return Jupiter;
+  });
+return on1, Jupiter
 }
-clickJupiter();
+setJupiter()
+// console.log(Jupiter)
 
-// //SATURN
-let imgSaturn = document.querySelector("#saturn");
+//SATURN
+let Saturn = document.querySelector("#Saturn")
 
-function clickSaturn(on1) {
+function setSaturn(on1) {
   fetch(saturn)
-    .then((res) => {
-      return res.json();
-    })
-    .then((on1) => {
-      imgSaturn.src = on1.url;
-      return imgSaturn;
-    });
+  .then((res) => {
+    return res.json()
+  }).then((on1) => {
+    Saturn.src = on1.url;
+    return Saturn;
+  });
+return on1, Saturn
 }
-clickSaturn();
+setSaturn()
 
-// //URANUS
-let imgUranus = document.querySelector("#uranus");
+//URANUS
+let Uranus = document.querySelector("#Uranus")
 
-function clickUranus(on1) {
+function setUranus(on1) {
   fetch(uranus)
-    .then((res) => {
-      return res.json();
-    })
-    .then((on1) => {
-      imgUranus.src = on1.url;
-      return imgUranus;
-    });
+  .then((res) => {
+    return res.json()
+  }).then((on1) => {
+    Uranus.src = on1.url;
+    return Uranus;
+  });
+return on1, Uranus
 }
-clickUranus();
+setUranus()
 
+//NEPTUNE
+let Neptune = document.querySelector("#Neptune")
 
-// //NEPTUNE
-let imgNep = document.querySelector("#neptune");
-
-function clickNep(on1) {
+function setNeptune(on1) {
   fetch(neptune)
-    .then((res) => {
-      return res.json();
-    })
-    .then((on1) => {
-      imgNep.src = on1.url;
-      return imgNep;
-    });
+  .then((res) => {
+    return res.json()
+  }).then((on1) => {
+    Neptune.src = on1.url;
+    return Neptune;
+  });
+  console.log(Neptune)
+return on1, Neptune
 }
-clickNep();
+setNeptune()
+// console.log(Neptune)
 
+//OPEN DROPDOWN
 
-//OPEN SIDEBAR
-let sideBar = document.querySelector("#nav-toggle");
+function myFunction() {
+  
+  document.getElementById("dropdownMenu").classList.toggle("show")
 
-sideBar.addEventListener("click", openSidebar);
-function openSidebar(e) {
-  document.querySelector(".open").style.width = "250px";
 }
 
-//REMOVE CENTER PLACEHOLDER
-let centerPic = document.querySelector(".picture");
-function closePic(e) {
-  if (centerPic.style.display === "none") {
-    centerPic.style.display = "block";
-  } else {
-    centerPic.style.display = "none";
+//TOGGLE CLICK
+//window clicks in this one
+window.onclick = function(e) {
+  if (!e.target.matches('.open')){
+    var dropdownMenu = document.getElementById("dropdownMenu")
+    if (dropdownMenu.classList.contains("show")){
+      dropdownMenu.classList.remove("show")
+    }
   }
-  console.log("pic gone");
 }
 
-//CLOSE SIDEBAR
-//sideBar.addEventListener("mouseout", closeSidebar)
-function closeSidebar(e) {
-  document.querySelector(".close").style.width = "0";
-  console.log("nav gone");
-}
 
-//OPEN MERCURY PICTURE
-let onMerc = document.querySelector("#closeMerc");
-onMerc.addEventListener("mouseout", closeSidebar);
-onMerc.addEventListener("click", seeMerc);
-onMerc.addEventListener("click", closePic);
+// function findpic() {
+//   event.preventDefault()
+//   document.getElementsById("pictureWrapper").classList.toggle("active")
+// }
+// window.onclick = function(e){
+//   if (!e.target.matches('.dropdown_content')){var pictures = document.getElementsByClassName()}
+// }
 
-function seeMerc(e) {
-  imgMerc.classList.remove("onOff");
-  console.log("yaypic");
-}
 
-// OPEN VENUS PICTURE
-let onVenus = document.querySelector("#closeVenus");
-function seeVenus(e) {
-  imgVenus.classList.remove("onOff");
-}
-onVenus.addEventListener("mouseout", closeSidebar);
-onVenus.addEventListener("click", seeVenus);
-onVenus.addEventListener("click", closePic);
 
-//OPEN MARS PICTURE
-let onMars = document.querySelector("#closeMars");
-function seeMars(e) {
-  imgMars.classList.remove("onOff");
-}
-onMars.addEventListener("mouseout", closeSidebar);
-onMars.addEventListener("click", seeMars);
-onMars.addEventListener("click", closePic);
 
-//OPEN JUPITER PICTURE
-let onJupiter = document.querySelector("#closeJupiter");
-function seeJupiter(e) {
-  imgJupiter.classList.remove("onOff");
-}
-onJupiter.addEventListener("mouseout", closeSidebar);
-onJupiter.addEventListener("click", seeJupiter);
-onJupiter.addEventListener("click", closePic);
+//SWITCH STATEMENT
 
-//OPEN SATURN PICTURE
-let onSaturn = document.querySelector("#closeSaturn");
-function seeSaturn(e) {
-  imgSaturn.classList.remove("onOff");
-}
-onSaturn.addEventListener("mouseout", closeSidebar);
-onSaturn.addEventListener("click", seeSaturn);
-onSaturn.addEventListener("click", closePic);
+// function showPicture() {
+//   switch(new image().findpic()){
 
-//OPEN URANUS PICTURE
-let onUranus = document.querySelector("#closeUranus");
-function seeUranus(e) {
-  imgUranus.classList.remove("onOff");
-}
-onUranus.addEventListener("mouseout", closeSidebar);
-onUranus.addEventListener("click", seeUranus);
-onUranus.addEventListener("click", closePic);
+//   case Mercury: {
 
-//OPEN NEPTUNE PICTURE
-let onNeptune = document.querySelector("#closeNeptune");
-function seeNeptune(e) {
-  imgNep.classList.remove("onOff");
-}
-onNeptune.addEventListener("mouseout", closeSidebar);
-onNeptune.addEventListener("click", seeNeptune);
-onNeptune.addEventListener("click", closePic);
+//     console.log("clicked merc")
+
+//     break;
+//   }
+//   case Venus: {
+//     display = document.getElementsById("Venus")
+//     console.log("clicked vensu")
+
+//     break;
+//   }
+//   case Mars: {
+//     display = document.getElementsById("Mars")
+//     console.log("clicked mars")
+
+//     break;
+
+//   }
+//   case Jupiter: {
+//     display = document.getElementsById("Jupiter")
+//     console.log("clicked jupiter")
+
+//     break;
+
+//   }
+//   case Saturn: {
+//     display = document.getElementsById("Saturn")
+//     break;
+
+//   }
+//   case Uranus: {
+//     display = document.getElementsById("Uranus")
+//     // break;
+
+//   }
+//   case Neptune: {
+//     display = document.getElementsById("Neptune")
+//     break;
+
+//   }
+//   default:
+//     display = "Select"
+//     break
+// }
+// }
+
+// showPicture()
+
+//window.onclick = function(event) {
+  //   onclick = event.stopPropagation()
+  //   event.preventDefault
+  //   if (!event.target.matches('.open')) {
+  //     var dropdowns = document.getElementsByClassName("dropdown-content");
+  //     var i;
+  //     for (i = 0; i < dropdowns.length; i++) {
+  //       var openDropdown = dropdowns[i];
+  //       if (openDropdown.classList.contains('show')) {
+  //         openDropdown.classList.remove('show');
+  //       }
+  //     }
+  //   }
+  // }
+  
+
+
+
+//use this one
+//window clicks in this one
+// window.onclick = function(e) {
+//   if (!e.target.matches('.open')){
+//     var dropdownMenu = document.getElementById("dropdownMenu")
+//     if (dropdownMenu.classList.contains("show")){
+//       dropdownMenu.classList.remove("show")
+//     }
+//   }
+// }
+
+
+
+//or this one
+// window clicks in this one
+// window.onclick = function(e) {
+//   if (!e.target.matches('.open')){
+//     var dropdownMenu = document.getElementById("dropdownMenu")
+//     if (dropdownMenu.classList.contains("show")){
+//       dropdownMenu.classList.remove("show")
+//     }
+//   }
+// }

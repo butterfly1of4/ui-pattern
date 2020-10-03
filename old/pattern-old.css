@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  /* margin: 1em solid black; */
+  background-color: gray;
+}
+
+nav {
+  background-color: black;
+  overflow: hidden;
+  height: 5em;
+  text-align: center;
+  color: white;
+  line-height: 2;
+  font-size: 40px;
+}
+
+#pageName {
+  display: block;
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  text-decoration: none;
+
+  background-color: black;
+}
+
+
+ul.close {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: black;
+  transition: 0.5s;
+  padding-top: 8em;
+  list-style-position: inside;
+  list-style: inside;
+  text-align: center;
+  overflow-x: hidden;;
+}
+
+
+
+li {
+  background-color: black;
+  align-content: space-around;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  list-style-position: inherit;
+  padding-top: 2em;
+}
+#nav-toggle {
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    text-align: right;
+    z-index: 2;
+    font-size: 35px;
+    
+    position: sticky;
+}
+.picture {
+  margin: 6em 27em auto auto;
+  width: 50em;
+  height: 30em;
+  background-color: white;
+  position: sticky;
+  text-align: center;
+  align-content: center;
+}
+
+.pictureGone {
+    margin: 6em 27em auto auto;
+    width: 50em;
+    height: 30em; 
+    position: sticky;
+}
+#merc {
+  height: 30em;
+  width: 50em;
+  border: 2px solid black;
+}
+
+#venus {
+  height: 40em;
+  width: 50em;
+  border: 2px solid black;
+}
+
+#mars {
+  height: 30em;
+  width: 50em;
+  border: 2px solid black;
+}
+#jupiter {
+  height: 40em;
+  width: 50em;
+  border: 2px solid black;
+}
+#saturn {
+  height: 32em;
+  width: 50em;
+  border: 2px solid black;
+}
+#uranus {
+  height: 30em;
+  width: 50em;
+  border: 2px solid black;
+}
+#neptune {
+  height: 30em;
+  width: 50em;
+  border: 2px solid black;
+}
+.onOff {
+  display: none;
+}

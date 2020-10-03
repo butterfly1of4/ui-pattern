@@ -2,33 +2,80 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <!-- <link rel="stylesheet" href="pattern.css" /> -->
     <link rel="stylesheet" href="pattern.css" />
+
     <title>UI Project</title>
   </head>
   <body>
-    <nav id="planets">The Planets!</br>You know Earth, now meet the rest!</nav>
-    <a id="nav-toggle" href="#">&#9776;</a>
-    <ul class="sidenav close open">
-     
-      <div id="pageName">Planets</div>
-      <li id="closeMerc">Mercury</li>
-      <li id="closeVenus">Venus</li>
-      <li id="closeMars">Mars</li>
-      <li id="closeJupiter">Jupiter</li>
-      <li id="closeSaturn">Saturn</li>
-      <li id="closeUranus">Uranus</li>
-      <li id="closeNeptune">Neptune</li>
-    </ul>
-
-    <div class="picture" placeholder="picture">THE </br>PLANETS
-      <img src="" class="onOff" id="merc"  />
-      <img src="" id="venus" class="onOff"/>
-      <img src="" class="onOff" id="mars"  />
-      <img src="" class="onOff" id="jupiter" />
-      <img src="" class="onOff" id="saturn" />
-      <img src="" class="onOff" id="uranus" />
-      <img src="" class="onOff" id="neptune" />
+    <nav id="planets">
+      <div class="navWrapper">
+      <div class="heading">
+      The Planets!</br>You know Earth, now meet the rest!
     </div>
+    <!-- MENU -->
+    <div class="dropdown">
+<button class="open" onclick="myFunction()"
+>
+    <img class ="hamburger"  src="images/circlehamburger1.png" />
+</button> 
+
+    <div class="dropdown_content" id="dropdownMenu" >
+    <a 
+href="#Mercury">Mercury</a>
+    <a class="menuItem" 
+
+    href="#Venus">Venus</a>
+    <a class="menuItem" 
+
+    href="#Mars">Mars</a>
+    <a class="menuItem"  
+
+    href="#Jupiter">Jupiter</a>
+    <a class="menuItem" 
+
+    href="#Saturn">Saturn</a>
+    <a class="menuItem" 
+
+    href="#Uranus">Uranus</a>
+    <a class="menuItem" 
+
+    href="#Neptune">Neptune</a>
+  </div>
+</div>
+  </div>
+  </nav>
+
+
+  <div class="picture" id="picture" placeholder="photo" >
+    <div class="placeholder active">
+      <img class="img" />
+    </div>
+    <img class="img planet" id="Mercury" src="" />
+    <img class="img planet" src="" id="Venus" />
+    <img class="img planet" src="" id="Mars"  />
+    <img class="img planet" src="" id="Jupiter" />
+    <img class="img planet" src="" id="Saturn" />
+    <img class="img planet" src="" id="Uranus" />
+    <img class="img planet" src="" id="Neptune" />
+  
+      </div>  
+   
+
+    <!-- <script src="pattern.js"></script> -->
     <script src="pattern.js"></script>
+
   </body>
 </html>
+
+
+  <!-- <div class="dropdown_content" id="dropdownMenu" >
+    <select>
+  <option class="menuItem"  value="Mercury">Mercury</option>
+  <option class="menuItem"  value="Venus">Venus</option>
+  <option class="menuItem"  value="Mars">Mars</option>
+  <option class="menuItem"  value="Jupiter">Jupiter</option>
+  <options class="menuItem"  value="Saturn">Saturn</options>
+  <option class="menuItem" value="Uranus">Uranus</option>
+  </select>
+</div> -->
