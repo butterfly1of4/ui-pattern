@@ -40,17 +40,19 @@ nav {
 .heading {
   margin: auto;
   font-size: 30px;
+  justify-self: center;
+  margin-left: 30%;
+  /* padding-left: 10px; */
 }
 .open {
   /* background-color: white; */
   background-image: url("circlehamburger2.png");
   background-color: transparent;
-
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
-  margin-right: 10em;
+  margin-right: 20%;
   height: 4em;
   width: 4em;
   /* z-index: 1; */
@@ -60,7 +62,8 @@ nav {
   position: relative;
   display: inline-block;
   z-index: 1;
-
+  margin-right: 10%;
+  margin-left: inherit;
   /* overflow:hidden; */
 }
 .dropdown .open {
@@ -69,6 +72,8 @@ nav {
   border: none;
   padding: 14px 16px;
   z-index: 1;
+  margin-right:auto;
+  margin-left: auto;
 }
 .dropdown_content {
   display: none;
@@ -115,9 +120,9 @@ nav {
 }
 .picture {
   display: flex;
-  border: red ipx solid;
-  /* flex-flow: column; */
-  margin: auto 10% 0 auto;
+  justify-items: center;
+  flex-flow: column;
+  /* margin: 0 10%; */
   max-height: 88vh;
   overflow: hidden;
 }
@@ -125,7 +130,7 @@ nav {
 .Mercury {
   margin-left: auto;
   margin-right: auto;
-  z-index:0;
+  /* z-index:0; */
   /* grid-column: 1; */
   /* visibility: hidden; */
 }
@@ -135,4 +140,4 @@ nav {
   /* grid-column: 2; */
   /* z-index:600; */
 
-} */
+ 
