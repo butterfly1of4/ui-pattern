@@ -12,7 +12,7 @@ nav {
   text-align: center;
   justify-content: center;
   align-items: center;
-  background-image: url("images/night_trees.jpg");
+  background-image: url("icons/black_stars.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -92,33 +92,16 @@ nav {
 }
 
 .show {
-  /* display: block; */
+  display: block;
+  /* display: flex; */
+  /* flex-flow:column; */
+}
+
+.picture {
   display: flex;
-  flex-flow:column;
-}
-
-.placeholder {
-  display:flex;
-  /* flex-flow: row; */
+  border: red ipx solid;
+  flex-flow: column;
   margin: 10%;
-  background-image: url("./images/galaxy-green.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: black;
-  height: auto;
-}
-
-
-.img {
-  display:flex;
-  /* visibility: hidden; */
-  margin: 10% auto;
-  /* overflow: hidden; */
-
-}
-
-.active {
-  /* overflow: hidden; */
-  visibility: visible;
+  max-height: 88vh;
+  overflow: hidden;
 }
