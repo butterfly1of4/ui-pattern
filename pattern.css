@@ -42,6 +42,7 @@ nav {
   font-size: 30px;
   justify-self: center;
   margin-left: 30%;
+  margin=right: inherit;
   /* padding-left: 10px; */
 }
 .open {
@@ -109,12 +110,13 @@ nav {
   background-repeat: no-repeat;
   background-position: center;
   background-color: black;
+  border: 1px solid white;
 }
 .planetWrapper {
   display: grid;
  
   overflow: hidden;
-  background-color: rebeccapurple;
+  background-color: transparent;
   margin-top: auto;
   margin-bottom: auto;
 }
