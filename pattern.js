@@ -145,7 +145,6 @@ setNeptune()
 function myFunction() {
   
   document.getElementById("dropdownMenu").classList.toggle("show")
-
 }
 
 //TOGGLE CLICK
@@ -158,14 +157,151 @@ window.onclick = function(e) {
     }
   }
 }
+//SELECT ITEM
+var item = document.getElementsByClassName("menuItem")
+console.log(item)
+// var currentlyOn = ""
+// let empty = true
 
+function toggle_visibility(item){
+  let id = ''
+  switch(id){
+    case "OffMercury":
+      id = "OffMercury"
+      // empty==false
+      console.log("mercu")
+      break
+     
+    case "OffVenus":
+      id="OffVenus"
+      // empty==false
+      console.log('venu')
+      break
+    }
+    console.log(id)
+    console.log(item)
+  // currentlyOn = 
+  document.getElementById(item).classList.toggle('visible')
 
-// function findpic() {
-//   event.preventDefault()
-//   document.getElementsById("pictureWrapper").classList.toggle("active")
+  // console.log(currentlyOn)
+  // return currentlyOn, item
+}
+let onMenu = document.getElementsByClassName("dropdown_content")
+
+item.onclick = function(e){
+  if(e.target.matches(".on")){
+    var item = document.getElementById(item)
+    if(menuItem.classList.contains('visible')){
+      menuItem.classList.remove('visible ')
+    }
+  }
+}
+// function hide_visibility(item){
+//   let id=item
+//   empty==false
+//   switch(id){
+//     case "OffMercury":
+//       empty==true
+//       break
+//     case "OffVenus":
+//       empty==true
+//       break
+
+//   }    console.log(id)
+//   console.log(item)
+// // currentlyOn = 
+// document.getElementById(item).classList.remove('visible')
+// // console.log(currentlyOn)
+// // return currentlyOn, item
 // }
-// window.onclick = function(e){
-//   if (!e.target.matches('.dropdown_content')){var pictures = document.getElementsByClassName()}
+
+
+// onMenu.onclick = function(e) {
+//   if (currentlyOn == true){
+//     e.target.value.classList.remove("visible")
+//     console.log(value)
+//   }
+//   if(currentlyOn == false){
+//     toggle_visibility(item)
+//   }
+// } 
+  
+
+console.log(item)
+
+
+
+//if item is clicked on 
+// item.onclick = function(e){
+//   let canSee = false
+//   if(e.target.matches(".planetWrapper_planet")){
+//     item.classList.add("visible")
+//     canSee==true
+//     console.log("seen")
+//   } 
+    //  if(canSee== true && e.target.matches(".planetWrapper_planet")){
+    //   item.classList.remove("visible") && canSee==false
+    //   e.target.item.classList.add("visible")
+    // console.log("seen2")
+
+    // }
+    // if(e.target.matches(".planetWrapper_planet") && canSee==false){
+    //   item.classList.adds("visible")
+    //   canSee==true
+    // console.log("seen3")
+
+    // }
+
+  // if(!e.target.matches(".planetWrapper_planet")){
+  //   console.log(item,"hello")
+  //   if(item.classList.contains('visible')){
+  //     item.classList.remove('visible')
+  //     console.log("not")
+  //   } console.log('yes')
+  // }
+//}
+
+
+
+
+
+// item.onclick = function(e){
+//   var planet = document.getElementById(id)
+//   if (!e.target.matches('menuItem')){
+//     var menuItem = document.getElementById(planet)
+//     if (planet.classList.contains("visible")){
+//       planet.classList.remove("visible")
+//     }
+//   }
+  
+
+// }
+
+
+
+
+
+
+
+
+
+
+// function toggle_visibility(id) {
+// var e = document.getElementById(id)
+// if(e.classList.contains('visible')){
+//  e.classList.remove('visible')
+// } 
+
+// }
+
+
+// item.onclick = function(e){
+//   if (!e.target.matches('item')){
+//     var planetWrapper = document.getElementsById('planetWrapper')
+//   if (planetWrapper.classList.contains("active")){
+//     planetWrapper.classList.remove("active")
+//     console.log("here it is")
+//   }}
 // }
 
 

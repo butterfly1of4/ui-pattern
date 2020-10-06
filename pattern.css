@@ -1,48 +1,56 @@
 body {
-  box-sizing: border-box;
-  max-width: 100vw;
+  /* box-sizing: border-box; */
+  max-width: 100%;
   max-height: 100%;
+  height: 100vh;
+  width: 100vw;
   margin: auto;
   background-image: url("icons/black_stars.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
   background-position: center;
 
 }
 
 nav {
   color: white;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
   /* background-image: url("icons/black_stars.jpg"); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  /* background-color: black; */
-  /* width: 100vw; */
-  height: 22vh;
-  max-width: 100vw;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  /* justify-content: center; */
+  /* align-items: center; */
+  height: 25%;
+  max-width: 100%;
   padding: 0 15px 15px 15px;
-  margin: 0;
+  /* margin: 0; */
+  box-sizing: border-box;
   /* overflow:hidden; */
 }
 
 .navWrapper {
   display: flex;
   width: 100%;
-  justify-content: flex-end;
+  height: auto;
+  /* max-width: 100%; */
+  justify-content: space-between;
+  justify-items: flex-end;
   align-items: center;
-  /* margin-left: 40%; */
+  margin-left: 40%;
+  /* margin-left: auto; */
 }
 
 .heading {
-  margin: auto;
+  /* margin: auto; */
+  display: flex;
+  flex-flow: row;
   font-size: 30px;
-  justify-self: center;
-  margin-left: 30%;
-  margin=right: inherit;
+  /* justify-self: center; */
+  /* margin-left: 45%; */
+  /* margin-right: 30%; */
   /* padding-left: 10px; */
 }
 .open {
@@ -101,45 +109,72 @@ nav {
   /* display: flex; */
   /* flex-flow:column; */
 }
-.planet {
+
+.picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 0%;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  margin: 0 10%;
+  max-height: 80vh;
+  height: 100%;
+  /* width: 100%; */
+  /* overflow: hidden; */
+  box-sizing: border-box;
+}
+.planetWrapper {
   max-width: 100%;
   max-height: 100%;
-  display: block;
+  display: grid;
+  position: relative;
+  grid-template-columns: auto;
+  /* grid-template-columns: repeat(12, 1fr); */
   background-image: url("icons/black_stars.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-color: black;
-  border: 1px solid white;
+  z-index: 0;
 }
-.planetWrapper {
+/* .planetWrapper__planet { 
   display: grid;
- 
-  overflow: hidden;
-  background-color: transparent;
-  margin-top: auto;
-  margin-bottom: auto;
-}
-.picture {
-  display: flex;
-  justify-items: center;
-  flex-flow: column;
-  /* margin: 0 10%; */
-  max-height: 88vh;
-  overflow: hidden;
-}
-
-.Mercury {
+  position: relative;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 0; */
+  /* overflow: hidden; */
+  /* background-color: transparent; */
+  /* margin-left: 20%; */
+ /* } */
+ .planetWrapper_planet--Mercury{
   margin-left: auto;
   margin-right: auto;
-  /* z-index:0; */
-  /* grid-column: 1; */
-  /* visibility: hidden; */
+  z-index:1;
+  grid-column: 1;
+  grid-row: 1;
+  border: 1px solid white;
+  visibility: hidden;
 }
-/* .Venus {
+
+.planetWrapper_planet--Venus {
   margin-left: auto;
   margin-right: auto;
-  /* grid-column: 2; */
-  /* z-index:600; */
-
- 
+  /* grid-column: 4/-1; */
+  grid-column: 1;
+  grid-row: 1;
+  z-index:2;
+  background-image: url("icons/black_stars.jpg");
+  border: 1px solid white;
+  visibility: hidden;
+}
+/* .menuItem {
+  display: list-item;
+} */
+.visible {
+  visibility: visible;
+}
