@@ -20,9 +20,10 @@
 </button> 
     <div class="dropdown_content" id="dropdownMenu" >
       <ul id="listWrapper">
-        <li onclick="toggle_visibility('MercuryOff')" " class="listItem"
-        value=0><a href="#Mercury">Mercury</a></li>
-        <li onclick="toggle_visibility('VenusOff')"  class="listItm" value=1><a href="#Venus">Venus</a></li>
+        <li onclick="toggle_visibility('MercuryOff')" " class="menuItem"
+        value=0
+        >Mercury</li>
+        <li onclick="toggle_visibility('VenusOff')"  class="menuItem" value=1>Venus</li>
       </ul>
     <!-- <a onclick="toggle_visibility('MercuryOff')" 
     value=1;
@@ -56,10 +57,10 @@ href="#Mercury">Mercury</a>
 <!-- Pictures -->
   <div class="picture" id="picture" placeholder="photo" >
   <ul class="planetWrapper" id="planetWrapper">
-    <li class="menuItem" id="MercuryOff">
+    <li class="planetWrapper_planet planetWrapper_planet--Mercury menuItem" id="MercuryOff">
     <img class="img"  id="Mercury" src="" />
     </li>
-    <li class=" menuItem" id="VenusOff" >
+    <li class="planetWrapper_planet planetWrapper_planet--Venus menuItem" id="VenusOff" >
     <img class="img" src="" id="Venus" />
     </li>
   <!-- <div class="Mars">

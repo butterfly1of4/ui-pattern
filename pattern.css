@@ -1,180 +1,161 @@
 body {
-  /* box-sizing: border-box; */
-  max-width: 100%;
-  max-height: 100%;
-  height: 100vh;
-  width: 100vw;
-  margin: auto;
-  background-image: url("icons/black_stars.jpg");
-  background-size: cover;
-  /* background-repeat: no-repeat; */
-  background-position: center;
+    /* box-sizing: border-box; */
+    max-width: 100%;
+    max-height: 100%;
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+    background-image: url("icons/black_stars.jpg");
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    background-position: center;
+  
+  }
+  
+  nav {
+    color: white;
+    /* background-image: url("icons/black_stars.jpg"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    /* justify-content: center; */
+    /* align-items: center; */
+    height: 25%;
+    max-width: 100%;
+    padding: 0 15px 15px 15px;
+    /* margin: 0; */
+    box-sizing: border-box;
+    /* overflow:hidden; */
+  }
+  
+  .navWrapper {
+    display: flex;
+    width: 100%;
+    height: auto;
+    /* max-width: 100%; */
+    justify-content: space-between;
+    justify-items: flex-end;
+    align-items: center;
+    margin-left: 40%;
+    /* margin-left: auto; */
+  }
+  
+  .heading {
+    /* margin: auto; */
+    display: flex;
+    flex-flow: row;
+    font-size: 30px;
+    /* justify-self: center; */
+    /* margin-left: 45%; */
+    /* margin-right: 30%; */
+    /* padding-left: 10px; */
+  }
+  .open {
+    /* background-color: white; */
+    background-image: url("circlehamburger2.png");
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-right: 20%;
+    height: 4em;
+    width: 4em;
+    /* z-index: 1; */
+    filter: invert(1);
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    margin-right: 10%;
+    margin-left: inherit;
+    /* overflow:hidden; */
+  }
+  .dropdown .open {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    padding: 14px 16px;
+    z-index: 1;
+    margin-right:auto;
+    margin-left: auto;
+  }
+  .dropdown_content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    margin-top: 30%;
+    min-width: 150px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    color: black;
+  }
+  
+  .dropdown_content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .show {
+    display: block;
+   
+    /* display: flex; */
+    /* flex-flow:column; */
+  }
+  
+  .picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 0%;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    margin: 0 10%;
+    max-height: 80vh;
+    height: 100%;
+    /* width: 100%; */
+    /* overflow: hidden; */
+    box-sizing: border-box;
+  }
+  .planetWrapper {
+    max-width: 100%;
+    max-height: 100%;
+    /* display: grid; */
+    display: flex;
+    overflow: scroll;
+    position: relative;
+    width : 75vw;
+    justify-content: space-between;
+    /* grid-template-columns: auto; */
+    /* grid-template-columns: repeat(12, 1fr); */
+    background-image: url("icons/black_stars.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    z-index: 0; 
+  }
+  
+  #mercury {
+    visibility: hidden;
 
-}
+  }
+  #venus {
+    visibility: hidden;
 
-nav {
-  color: white;
-  /* background-image: url("icons/black_stars.jpg"); */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  /* justify-content: center; */
-  /* align-items: center; */
-  height: 25%;
-  max-width: 100%;
-  padding: 0 15px 15px 15px;
-  /* margin: 0; */
-  box-sizing: border-box;
-  /* overflow:hidden; */
-}
-
-.navWrapper {
-  display: flex;
-  width: 100%;
-  height: auto;
-  /* max-width: 100%; */
-  justify-content: space-between;
-  justify-items: flex-end;
-  align-items: center;
-  margin-left: 40%;
-  /* margin-left: auto; */
-}
-
-.heading {
-  /* margin: auto; */
-  display: flex;
-  flex-flow: row;
-  font-size: 30px;
-  /* justify-self: center; */
-  /* margin-left: 45%; */
-  /* margin-right: 30%; */
-  /* padding-left: 10px; */
-}
-.open {
-  /* background-color: white; */
-  background-image: url("circlehamburger2.png");
-  background-color: transparent;
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  margin-right: 20%;
-  height: 4em;
-  width: 4em;
-  /* z-index: 1; */
-  filter: invert(1);
-}
-.dropdown {
-  position: relative;
-  display: inline-block;
-  z-index: 1;
-  margin-right: 10%;
-  margin-left: inherit;
-  /* overflow:hidden; */
-}
-.dropdown .open {
-  cursor: pointer;
-  outline: none;
-  border: none;
-  padding: 14px 16px;
-  z-index: 1;
-  margin-right:auto;
-  margin-left: auto;
-}
-.dropdown_content {
-  display: none;
-  position: absolute;
-  background-color: white;
-  margin-top: 30%;
-  min-width: 150px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  color: black;
-}
-
-.dropdown_content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.show {
-  display: block;
- 
-  /* display: flex; */
-  /* flex-flow:column; */
-}
-
-.picture {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 0%;
-  /* margin-left: auto; */
-  /* margin-right: auto; */
-  margin: 0 10%;
-  max-height: 80vh;
-  height: 100%;
-  /* width: 100%; */
-  /* overflow: hidden; */
-  box-sizing: border-box;
-}
-.planetWrapper {
-  max-width: 100%;
-  max-height: 100%;
-  display: grid;
-  position: relative;
-  grid-template-columns: auto;
-  /* grid-template-columns: repeat(12, 1fr); */
-  background-image: url("icons/black_stars.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: black;
-  z-index: 0;
-}
-/* .planetWrapper__planet { 
-  display: grid;
-  position: relative;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  z-index: 0; */
-  /* overflow: hidden; */
-  /* background-color: transparent; */
-  /* margin-left: 20%; */
- /* } */
- .planetWrapper_planet--Mercury{
-  margin-left: auto;
-  margin-right: auto;
-  z-index:1;
-  grid-column: 1;
-  grid-row: 1;
-  border: 1px solid white;
-  visibility: hidden;
-}
-
-.planetWrapper_planet--Venus {
-  margin-left: auto;
-  margin-right: auto;
-  /* grid-column: 4/-1; */
-  grid-column: 1;
-  grid-row: 1;
-  z-index:2;
-  background-image: url("icons/black_stars.jpg");
-  border: 1px solid white;
-  visibility: hidden;
-}
-/* .menuItem {
-  display: list-item;
-} */
-.visible {
-  visibility: visible;
-}
+  }
+  .menuItem {
+    display: hidden;
+  }
+  
+  .visible {
+    visibility: visible;
+  }
