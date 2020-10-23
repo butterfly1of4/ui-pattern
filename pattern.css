@@ -115,22 +115,20 @@ nav {
   justify-content: center;
   align-items: center;
   flex-direction:row;
-  margin-bottom: 0%;
-padding-left: auto;
-padding-right: auto;
-  margin: 0 10%;
-  max-height: 80vh;
-  height: 100%;
+ overflow: hidden;
+  margin: 0 10% 15% 10%;
+  max-height: 80%;
+  height: 80%;
   /* width: 100%; */
   overflow: hidden;
   /* box-sizing: border-box; */
 }
 .planetWrapper {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 80%;
   /* display: grid; */
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   overflow: scroll;
   position: relative;
   width : 75vw;
@@ -141,25 +139,37 @@ padding-right: auto;
   overflow-x: hidden;
   object-fit: fill;
   object-position: 50% 50%;
+  /* padding-left: 15%; */
+  /* padding-right: 15%; */
 }
 .menuItem{
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 
-  /* padding-left: 25%;
-  padding-right: 25%; */
-  /* margin-right: auto; */
+  /* padding-left: 25%; */
+  /* padding-right: 25%; */
+  margin-right: auto;
   margin-left: 25%;
+  padding-bottom: 16%;
 }
 
 .notFirst {
   /* height: auto; */
-  /* margin-right: -50vw; */
+  /* margin-right: 35%; */
+  /* margin-left: 35%;   */
 }
-#Mercury {
-  overflow: hidden;
-  /* padding-left: 25%;
-   padding-right: 35%;
-   margin-right: 25%;
-  margin-left: 25%;  */
+#MercuryOff {
+  /* overflow: hidden; */
+  /* padding-left: 35%; */
+   /* padding-right: 35%; */
+   /* margin-right: 35%; */
+  /* margin-left: 35%;   */
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+#VenusOff {
+  /* margin-right: 35%; */
+  /* margin-left: 35%;   */
+  position: relative;
 }
