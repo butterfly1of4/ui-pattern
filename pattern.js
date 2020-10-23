@@ -159,28 +159,115 @@ window.onclick = function(e) {
     }
   }
 }
-//SELECT ITEM
-var item = document.getElementsByClassName("listItem")
-console.log(item)
-// console.log(typeof(item))
-var i = 0
-let id = ''
-for (let i = 0; i<item.length; i++ ){
-  id = item[i].innerHTML
-  console.log(id)
-}
-console.log(id)
+
+// add event listener to each list item 
+// get value of each list item
+// match element with list item
+// toggle the img 
 
 
-function toggle_visibility() {
-    document.getElementById(id).classList.add('visible')
-    console.log('visiblity')
-}
-// toggle_visibility()
-
-window.onclick = function(e){
-  if(e.target.id==="id"){
-    console.log(item, id, i)
-  } 
+var items = document.getElementsByClassName("listItem")
+console.log(items)
+var pics = document.getElementsByClassName("menuItem")
+console.log(pics)
+var seeme = document.getElementsByTagName("img")
+console.log(seeme)
+function clickFunction() {
+  
+  }
+  for (let i = 0; i<items.length; i++ ){
+    items[i].addEventListener('click', clickFunction)
+    
+      console.log("worked ")
+      console.log(items)
+      console.log(pics)
+      console.log(pics[i])
+      console.log(seeme[i])
+      console.log(seeme[i].value)
+      console.log(items[i].value)
   }
 
+clickFunction()
+// }
+// function  getValue() {
+//   for (let i = 0; i<item.length; i++ ){
+
+//   }
+// }
+//SELECT ITEM
+// var item = document.getElementsByClassName("listItem")
+// console.log(item)
+// // console.log(typeof(item))
+// var i  
+// let id = ''
+// for (let i = 0; i<item.length; i++ ){
+//   id = item[i].innerHTML
+//   console.log(id) 
+  
+// }
+// console.log(id)
+// console.log(i)
+
+
+
+
+
+// function toggle_visibility() {
+    // document.getElementById(id).classList.add('visible')
+    // console.log('visiblity')
+// }
+// toggle_visibility()
+
+// window.onclick = function(e){
+//   if(e.target.id==="id"){
+//     console.log(item, id, i)
+//   } 
+//   }
+
+
+//Try #1-w3 js slideshow
+// var picIndex = 1
+
+// // change slideview
+// function changePic(n) {
+// toggle_visibility(picIndex)
+// console.log("change")
+// }
+
+// //next pic
+// function seePic(n){
+//   toggle_visibility(picIndex +=n)
+//   console.log('visible')
+// }
+
+// // current slide
+// function currentPic(n) {
+//   toggle_visibility(picIndex=n)
+//   console.lob("current")
+// }
+
+// // change slide
+// function toggle_visibility(n){
+// var i 
+// var slides = document.getElementsByClassName("menuItem")
+// var listClick = document.getElementsByClassName("listItem")
+// if (n > slides.length) {picIndex=1}
+// if (n < 1){picIndex=slides.length}
+// for (i = 0; i < slides.length; i++){
+//     slides[i].style.display = "none"
+// }
+// for ( i = 0; i < listClick.length; i ++) {
+//   listClick[i].className += "active"
+// }
+// slides[picIndex-1].style.display="block"
+// listClick = listClick[picIndex-1].classList.add("active")
+// // listClick[picIndex-1].className += "active"
+// }
+// console.log(picIndex)
+// console.log(slides)
+// console.log(listClick)
+
+
+
+
+// }

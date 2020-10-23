@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -19,35 +20,29 @@
 >
 </button> 
     <div class="dropdown_content" id="dropdownMenu" >
-      <ul id="listWrapper">
-        <li onclick="toggle_visibility('MercuryOff')" " class="listItem"
+      <!-- <ul id="listWrapper">
+        <li onclick="toggle_visibility('MercuryOff')"  class="listItem"
         value=0><a href="#Mercury">Mercury</a></li>
-        <li onclick="toggle_visibility('VenusOff')"  class="listItm" value=1><a href="#Venus">Venus</a></li>
-      </ul>
-    <!-- <a onclick="toggle_visibility('MercuryOff')" 
+        <li onclick="toggle_visibility('VenusOff')"  class="listItem" value=1><a href="#Venus">Venus</a></li>
+      </ul> -->
+    <a 
     value=1;
     class="menuItem"  
 href="#Mercury">Mercury</a>
-
     <a class="menuItem"  
-    onclick="toggle_visibility('VenusOff')"
+
     value=2
     href="#Venus">Venus</a>
     <a class="menuItem" 
-
     href="#Mars">Mars</a>
     <a class="menuItem"  
-
     href="#Jupiter">Jupiter</a>
     <a class="menuItem" 
-
     href="#Saturn">Saturn</a>
     <a class="menuItem" 
-
     href="#Uranus">Uranus</a>
     <a class="menuItem" 
-
-    href="#Neptune">Neptune</a> -->
+    href="#Neptune">Neptune</a>
   </div>
 </div>
   </div>
@@ -55,29 +50,29 @@ href="#Mercury">Mercury</a>
 
 <!-- Pictures -->
   <div class="picture" id="picture" placeholder="photo" >
-  <ul class="planetWrapper" id="planetWrapper">
-    <li class="menuItem" id="MercuryOff">
-    <img class="img"  id="Mercury" src="" />
-    </li>
-    <li class=" menuItem" id="VenusOff" >
-    <img class="img" src="" id="Venus" />
-    </li>
-  <!-- <div class="Mars">
-    <img class="img" src="" id="Mars"  /> 
-  </div> -->
-  <!-- <div class="Jupiter">
-    <img class="img" src="" id="Jupiter" />
-  </div> -->
-  <!-- <div class="Saturn">
-    <img class="img" src="" id="Saturn" />
-  </div> -->
-  <!-- <div class="Uranus">
-    <img class="img" src="" id="Uranus" />
-  </div> -->
-  <!-- <div class="Neptune">
-   <img class="img" src="" id="Neptune" />
-  </div> -->
-</ul>
+  <div class="planetWrapper" id="planetWrapper">
+    <div class="menuItem" id="MercuryOff">
+    <img value=0 class="img"  id="Mercury" src="" />
+    </div>
+    <div class=" menuItem notFirst" id="VenusOff" >
+    <img value=1 class="img" src="" id="Venus" />
+    </div>
+  <div class="menuItem notFirst">
+    <img class="img" value=2 src="" id="Mars"  /> 
+  </div>
+  <div class="menuItem notFirst">
+    <img class="img" value=3 src="" id="Jupiter" />
+  </div>
+  <div class="menuItem notFirst">
+    <img class="img" value=4 src="" id="Saturn" />
+  </div>
+  <div class="menuItem notFirst">
+    <img class="img" value=5 src="" id="Uranus" />
+  </div>
+  <div class="menuItem notFirst">
+   <img class="img" value=6 src="" id="Neptune" />
+  </div>
+  </div>
       </div>  
    
 
