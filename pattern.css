@@ -1,8 +1,8 @@
 body {
   /* box-sizing: border-box; */
-  max-width: 100%;
-  max-height: 100%;
-  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  height: 90vh;
   width: 100vw;
   margin: auto;
   background-image: url("icons/black_stars.jpg");
@@ -38,7 +38,7 @@ nav {
   justify-content: space-between;
   justify-items: flex-end;
   align-items: center;
-  margin-left: 40%;
+  margin-left: 37%;
   /* margin-left: auto; */
 }
 
@@ -48,7 +48,8 @@ nav {
   flex-flow: row;
   font-size: 30px;
   /* justify-self: center; */
-  /* margin-left: 45%; */
+  margin-left: auto;
+  margin-right: auto;
   /* margin-right: 30%; */
   /* padding-left: 10px; */
 }
@@ -116,7 +117,7 @@ nav {
   align-items: center;
   flex-direction:row;
  overflow: hidden;
-  margin: 0 10% 15% 10%;
+  margin: 0 10% auto 10%;
   max-height: 80%;
   height: 80%;
   /* width: 100%; */
@@ -126,8 +127,6 @@ nav {
 .planetWrapper {
   max-width: 100%;
   max-height: 80%;
-  /* display: grid; */
-  display: flex;
   flex-direction: column;
   overflow: scroll;
   position: relative;
@@ -139,37 +138,45 @@ nav {
   overflow-x: hidden;
   object-fit: fill;
   object-position: 50% 50%;
+  
   /* padding-left: 15%; */
   /* padding-right: 15%; */
 }
 .menuItem{
   display: flex;
   justify-content: space-evenly;
-
+  margin-top: auto;
   /* padding-left: 25%; */
   /* padding-right: 25%; */
   margin-right: auto;
   margin-left: 25%;
   padding-bottom: 16%;
+
+
 }
 
 .notFirst {
-  /* height: auto; */
-  /* margin-right: 35%; */
-  /* margin-left: 35%;   */
-}
-#MercuryOff {
-  /* overflow: hidden; */
-  /* padding-left: 35%; */
-   /* padding-right: 35%; */
-   /* margin-right: 35%; */
-  /* margin-left: 35%;   */
   margin-left: auto;
   margin-right: auto;
-  position: relative;
+  margin-top: auto;
+}
+#MercuryOff {
+  margin-left: auto;
+  margin-right: auto;
+
 }
 #VenusOff {
-  /* margin-right: 35%; */
-  /* margin-left: 35%;   */
-  position: relative;
+  margin-right: auto;
+  margin-left: auto;  
+}
+#Venus {
+  max-height: 50vh;
+  max-width: 70vw;
+}
+#Jupiter {
+  max-height: 50vh;
+  max-width: 70vw;
+}
+@media screen and (max-width: 1025px){
+  
 }

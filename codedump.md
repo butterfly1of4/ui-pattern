@@ -16,6 +16,22 @@ img {
   background-color: transparent;
 }
 
+#MercuryOff {
+  /* overflow: hidden; */
+  /* padding-left: 35%; */
+   /* padding-right: 35%; */
+   /* margin-right: 35%; */
+  /* margin-left: 35%;   */
+  margin-left: auto;
+  margin-right: auto;
+  /* position: relative; */
+}
+#VenusOff {
+  margin-right: auto;
+  margin-left: auto;  
+  /* position: relative; */
+}
+
 
 
 .picture {
